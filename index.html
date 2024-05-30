@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-center ">
+        <h1>STRATECH BUDGET APP</h1>
+    </div>
+
+    <div class="container-fluid  shadow-sm  py-4 mt-5    w-100  mx-auto  bg-white">
+        <p class="alert alert-danger p-2 text-center" style="display: none;" id="error1">Please enter your budget
+        </p>
+        <p class="alert alert-danger p-2 text-center" style="display: none;" id="error2">Please fill in your details
+        </p>
+
+        <div class="boss">
+            <div class="gome">
+                <h6 class="gaee">Your Budget: </h6>
+                <div class="dart"> <input type="number" id="sewa" placeholder="Enter your budget" class=" oga">
+                    <div> <button class="cuye" onclick="bidy()">Enter</button></div>
+                </div>
+            </div>
+            
+            <div class="gom">
+                <h6 class="gaee"> Expense Description: </h6>
+                <div> <input type="text" id="arr" placeholder="Enter your expense description!." class=" ogas"></div>
+            </div>
+            <div class="gom">
+                <h6 class="gaee"> Qty: </h6>
+                <div> <input type="number" id="raa" class=" oge"></div>
+            </div>
+            <div class="gom">
+                <h6 class="gaee ">Expense Amount: </h6>
+                <div class="dart"> <input type="number" id="sew" placeholder="Enter your expense amount." class=" oga">
+                    <div> <button class="cuye" onclick="ipeedad()">Enter</button></div>
+                </div>
+            </div>
+           
+
+        </div>
+        <div class="showt px-2" >
+            <div class="unde">
+                <div><img src="image/money-bag.png" alt="" width="70px"></div>
+                <div id="showCase" class="vase" style="font-family: sans-serif;"> $ 0<p
+                        style="font-size:15px; font-weight: bold;font-family:sans-serif;margin-left: -4px;">Budget</p>
+                </div>
+            </div>
+
+
+
+            <div class="undes">
+                <div><img src="image/money (1).png" alt="" width="70px"></div>
+                <div id="caseDew" class="vase" style="font-family: sans-serif;"> $ 0<p
+                        style="font-size:15px; font-weight: bold;font-family:sans-serif;margin-left: -4px;">Expenses</p>
+                </div>
+            </div>
+
+            <div class="unda">
+                <div><img src="image/money.png" alt="" width="70px"></div>
+                <div id="sune" class="vase" style="font-family: sans-serif;"> $ 0<p
+                        style="font-size:15px; font-weight: bold;font-family:sans-serif;margin-left: -4px;">Balance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="  container mt-5 mb-5 bg-white ms-auto py-4 ">
+        <h3 class="mb-5  ">EXPENSES.</h3>
+        <div id="discreet"></div>
+
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog text-dark">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Items</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="my-2 form-control" placeholder="Name" id="narr">
+                    <input type="number" class="my-2 form-control" placeholder="Amount" id="nsew">
+                    <input type="number" class="my-2 form-control" placeholder="quantity" id="nraa">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" onclick="dit()" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
