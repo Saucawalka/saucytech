@@ -18,7 +18,6 @@ const bidy = () => {
     } else {
         error1.style.display = 'block'
     }
-    console.log(budget);
     showCase.innerHTML = '$' + ` ${budget}` + '<br>' + '<p style="font-size:15px; font-weight: bold;font-family:sans-serif;">Budget</p>';
 
     sune.innerHTML = '$' + ` ${bal}` + '<br>' + '<p style="font-size:15px; font-weight: bold;font-family:sans-serif;">Balance</p>';
@@ -74,10 +73,22 @@ const nay = (i) => {
     if (confirmation == true) {
         items.splice(i, 1)
 
-        bal = bal + rand
+
+         
+        // bal = bal + rand
+        // console.log(items);
+
+        let totalInCart = 0
+        items.map((item, index)=>{
+            let calTotal = item.quantity * item.amount
+            totalInCart += calTotal
+        })
+        console.log("Total in cart " + totalInCart);
+        bal = budget - totalInCart
+
         sune.innerHTML = '$' + `${bal}` + '<br>' + '<p style="font-size:15px; font-weight: bold;font-family:sans-serif;">Balance</p>';
 
-        expense = expense - rand
+        expense = totalInCart
 
         caseDew.innerHTML = '$' + expense + '<br>' + '<p style="font-size:15px; font-weight: bold;font-family:sans-serif;">Expense</p>';
         showa()
@@ -100,7 +111,7 @@ const dit = () => {
     sinit = bud.amount * bud.quantity
     bal = 0
     bal = budget - sinit
-    expense = sinit - expense
+    expense =  expense - sinit 
     sune.innerHTML = '$' + `${bal}` + '<br>' + '<p style="font-size:15px; font-weight: bold;font-family:sans-serif;">Balance</p>';
     caseDew.innerHTML = '$' + expense + '<br>' + '<p style="font-size:15px; font-weight: bold;font-family:sans-serif;">Expense</p>';
 
